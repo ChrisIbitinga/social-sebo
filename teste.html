@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href="{{BASE}}public/assets/css/style.css">
+	<link rel="shortcut icon" href="{{BASE}}public/assets/img/favicon.png" type="image/png">
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+	<!------------------------------------ HEADER--------------------------------->
+
+	<header class="vw-100">
+		<!--FIXED-->
+		<div class="navbar-fixed">
+			<nav class="menu transparent">
+				<div class="container container-lg">
+					<div class="nav-wrapper">
+						<a href="{{BASE}}" class="brand-logo">
+							<img src="{{BASE}}public/assets/img/logo.png" alt="">
+						</a>
+						<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+							class="material-icons">menu</i></a>
+
+
+							<ul id="dropdownLogin" class="dropdown-content">
+								<li><a href="{{BASE}}login/main">Login</a></li>
+
+								{% for user in nome %}
+								{% if user != null %}
+								<li><a class="'red-text" href="{{BASE}}login/logout" onclick="return confirm('Deseja realmente sair?')">Sair</a></li>
+								<li><a href="{{BASE}}dashboard/">Painel</a></li>
+								{% endif %}
+								{% endfor %}
+							</ul>
+
+							<ul class="right hide-on-med-and-down">
+								<li><a href="{{BASE}}">Home</a></li>
+								<li><a class='dropdown-trigger  transparent' href='#' data-target='dropdownFull'>Categorias<i
+									class="material-icons right">arrow_drop_down</i></a></li>
+									<li><a href="{{BASE}}produto/verTodos">Produtos</a></li>
+									<li><a href="{{BASE}}pedra/verTodas">Pedras</a></li>
+									{% if userName != null %}
+									<li><a href="{{BASE}}dashboard/main">Painel</a></li>
+									{% endif %}
+									<li><a class="dropdown-trigger left" href="#!" data-target="dropdownLogin"> 
+										{% if userName == null %}
+										Entrar
+										<i class="material-icons right">locked</i></a></li>
+
+										{% else %}
+										Olá {{userName}}
+										<i class="material-icons right">lock_open</i></a></li>
+										{% endif %}
+
+
+									</ul>
+
+								</div>
+							</div>
+						</nav> 
+						<!-- Dropdown Structure full -->
+						<ul id='dropdownFull' class='dropdown-content'>
+							{% for categoria in categorias %}
+							<li><a href="{{BASE}}produto/verPorCategoria/{{categoria.slugCategoria}}">{{categoria.nomeCategoria}}</a></li>
+							{% endfor %}
+						</ul>
+						<!-- Dropdown Structure Mobile -->
+						<ul id='dropdownMobile' class='dropdown-content'>
+							{% for categoria in categorias %}
+							<li><a href="{{BASE}}produto/verPorCategoria/{{categoria.slugCategoria}}">{{categoria.nomeCategoria}}</a></li>
+							{% endfor %}
+						</ul>
+
+						<!------------------------menu mobile --------------->
+
+						<ul class="sidenav" id="mobile-demo">
+							<li><a href="{{BASE}}">Home</a></li>
+							<li><a href="{{BASE}}produto/verTodos">Produtos</a></li>
+							<li><a class='dropdown-trigger  transparent' href='#' data-target='dropdownMobile'>Categoria<i
+								class="material-icons right">arrow_drop_down</i></a></li>
+								<li><a href="{{BASE}}pedra/verTodas">Pedras</a></li>
+								<li><a class="" href="{{BASE}}login/"><i class="material-icons">locked</i></a></li>
+							</ul>
+						</div>
+						<!--fim da fixed-->
+
+					</header>
+
+
+
+				</body>
+				</html>
+				

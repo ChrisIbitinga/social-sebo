@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+:root {
+    --success: #009688;
+    --danger: hsla(337, 100%, 26%, 1);
+    --amber: #ffa000;
+    --off: #fafafa;
+    --black: hsla(231, 76%, 3%, 1);
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.p-1 {
+    padding: 1.5rem!important;
+}
+
+.p-2 {
+    padding: 2.3rem!important;
+}
+
+.p-lateral-0 {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+h1,
+h2 {
+    margin: 1rem 0;
+}
+
+blockquote {
+    border-left: 6px solid var(--success);
+}
+
+.title {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.title-small {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+p {
+    letter-spacing: .1rem;
+    font-size: 1.1rem;
+}
+
+.m-l-1 {
+    margin-left: 1rem!important;
+}
+
+.m-r-1 {
+    margin-right: .8rem;
+}
+
+.bg-success {
+    background-color: var(--success);
+}
+
+.bg-off {
+    background-color: var(--off);
+}
+
+.small-text {
+    font-size: .7rem;
+}
+
+.light-text {
+    font-weight: 100;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.off-text {
+    color: var(--off)!important;
+}
+
+.amber-text {
+    color: var(--amber)!important;
+}
+
+.danger-text {
+    color: var(--danger);
+}
+
+.bg-amber {
+    background-color: var(--amber);
+}
+
+.success-text {
+    color: var(--success);
+}
+
+.bg-danger {
+    background-color: var(--danger);
+}
+
+.btn-success {
+    background-color: var(--success);
+    color: var(--off);
+    font-weight: 700;
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: var(--off);
+    font-weight: 700;
+}
+
+.p-t-1 {
+    padding-top: 2rem;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box-livro {
+    padding-bottom: 2rem!important;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 2000px;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+.livro-content {
+    padding: .2rem;
+}
+
+.box-login {
+    padding: 1.5rem;
+}
+
+.card-image span {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem!important;
+    width: 100%;
+    color: var(--off)!important;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    transition: ease 0.8s;
+}
+
+.card-image:hover span {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem!important;
+    width: 100%;
+    color: var(--off)!important;
+    padding: .9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* CONTENT */
+
+.content {
+    padding: 1rem;
+    min-height: 80vh;
+    height: auto;
+    width: 100%;
+}
+
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    min-height: 60px;
+    background-color: var(--success);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    font-size: 1rem;
+    color: var(--off);
+}
+
+.footer a {
+    color: var(--off);
+    text-decoration: none;
+}
+
+.social a {
+    padding: 1rem;
+}
+
+.form-login {
+    width: 100%;
+    background-color: var(--off);
+    display: flex;
+    min-height: 490px;
+    height: auto;
+    border-radius: 6px;
+    /* box-shadow: 12px 12px 22px rgba(0,0,0, 0.2); */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+}
+
+.form-cadastro {
+    width: 100%;
+    background-color: var(--success);
+    display: flex;
+    min-height: 490px;
+    height: auto;
+    border-radius: 6px;
+    /* box-shadow: 12px 12px 22px rgba(0,0,0, 0.2); */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+}
+
+.alert {
+    width: 100%;
+    color: var(--off);
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: .5rem;
+    text-align: center;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.1)
+}
+
+
+/* 
+.form-login a
+{
+    text-decoration: none;
+    padding: 1rem;
+} */
+
+.login-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-btn {
+    text-align: left;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.divAlert {
+    width: 100%;
+}
+
+.list-span {
+    padding: 0 1rem;
+}
+
+
+/* NVABAR MATERIALIZE */
